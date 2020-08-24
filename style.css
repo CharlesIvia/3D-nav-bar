@@ -38,6 +38,7 @@ header {
   z-index: 100;
   border-radius: 0.3rem;
   cursor: pointer;
+  display: none;
 }
 
 .bar,
@@ -62,4 +63,56 @@ header {
 
 .bar::after {
   top: 2rem;
+}
+
+.open .bar {
+  background-color: transparent;
+}
+
+.open .bar::before {
+  transform: rotate(45deg);
+}
+.open .bar::after {
+  transform: rotate(-45deg);
+}
+
+.open .bar::before,
+.open .bar::after {
+  top: 0;
+}
+
+nav {
+  height: 6rem;
+  width: 100%;
+  line-height: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+a {
+  text-decoration: none;
+}
+
+.brand {
+  font-size: 1.5rem;
+  color: white;
+  background-color: mediumpurple;
+  padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: mediumpurple;
+  margin-right: 2rem;
+  padding: 0 1rem;
+  display: block;
+  position: relative;
 }
