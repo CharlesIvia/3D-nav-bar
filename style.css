@@ -170,3 +170,64 @@ nav ul {
     opacity: 1;
   }
 }
+
+/* Responsiveness */
+
+@media screen and (max-width: 760px) {
+  .brand {
+    animation: initial;
+    border-radius: 100%;
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  header {
+    perspective: 75rem;
+    overflow: hidden;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30rem;
+    height: 100vh;
+    line-height: initial;
+    flex-direction: column;
+    box-shadow: none;
+    text-align: center;
+    transform: rotateY(180deg);
+    transform-origin: top left;
+    transition: transform 650s cubic-bezier(0.55, 0.55, 0.675, 0.19);
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: -5rem;
+  }
+
+  .nav-item {
+    animation: initial;
+  }
+
+  .nav-link {
+    margin: 2rem 0;
+  }
+
+  header.open nav {
+    transform: rotateY(0);
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .overlay .open {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
