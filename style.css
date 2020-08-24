@@ -200,7 +200,7 @@ nav ul {
     flex-direction: column;
     box-shadow: none;
     text-align: center;
-    transform: rotateY(180deg);
+    transform: rotateY(50deg);
     transform-origin: top left;
     transition: transform 650s cubic-bezier(0.55, 0.55, 0.675, 0.19);
   }
@@ -226,7 +226,7 @@ nav ul {
     display: block;
   }
 
-  .overlay .open {
+  .overlay.open {
     opacity: 1;
     transform: scaleX(1);
   }
