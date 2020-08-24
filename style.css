@@ -140,3 +140,33 @@ nav ul {
   transform: rotateX(-90deg);
   transform-origin: top;
 }
+
+.nav-item:nth-child(odd) {
+  animation: up 1s forwards;
+}
+.nav-item:nth-child(even) {
+  animation: down 1s forwards;
+}
+
+@keyframes up {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes down {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
