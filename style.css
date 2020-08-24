@@ -90,6 +90,7 @@ nav {
   text-transform: uppercase;
   background-color: white;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 a {
@@ -115,4 +116,27 @@ nav ul {
   padding: 0 1rem;
   display: block;
   position: relative;
+  transform-style: preserve-3d;
+  transform-origin: top;
+  transition: transform 650ms cubic-bezier(0.55, 0.55, 0.675, 0.19);
+}
+
+.nav-link:hover {
+  transform: rotateX(90deg);
+}
+
+.nav-item:last-child .nav-link {
+  margin-right: 0;
+}
+
+.nav-link::after {
+  background-color: mediumpurple;
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  padding: inherit;
+  color: white;
+  transform: rotateX(-90deg);
+  transform-origin: top;
 }
